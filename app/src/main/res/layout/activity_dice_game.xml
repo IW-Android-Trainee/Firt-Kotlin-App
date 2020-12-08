@@ -12,13 +12,21 @@
         android:id="@+id/diceNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:gravity="center"
         android:layout_margin="10dp"
+        android:gravity="center"
         android:text="Roll Now!"
         android:textColor="@color/black"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:visibility="gone"
         tools:ignore="HardcodedText" />
+
+    <ImageView
+        android:id="@+id/diceImage"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/dice_1"
+        tools:ignore="ContentDescription" />
 
     <Button
         android:id="@+id/rollDice"
