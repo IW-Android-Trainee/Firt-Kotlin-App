@@ -23,7 +23,18 @@ class DiceGame : AppCompatActivity() {
     @SuppressLint("SetTextI18n")
     private fun onRollDiceClick() {
         rollDice.setOnClickListener {
-            when {
+            val drawableResource = when (roll()) {
+                1 -> R.drawable.dice_1
+                2 -> R.drawable.dice_2
+                3 -> R.drawable.dice_3
+                4 -> R.drawable.dice_4
+                5 -> R.drawable.dice_5
+                else -> R.drawable.dice_6
+            }
+            diceImageView.setImageResource(drawableResource)
+            diceImageView.contentDescription = roll().toString()
+
+            /*when {
                 roll() == 1 -> {
                     diceImageView.setImageResource(R.drawable.dice_1)
                 }
@@ -42,7 +53,7 @@ class DiceGame : AppCompatActivity() {
                 else -> {
                     diceImageView.setImageResource(R.drawable.dice_6)
                 }
-            }
+            }*/
 
             /*if (luckyNumber == roll())
                 diceNumber.text = "Congratulations! you won the game by rolling " +
