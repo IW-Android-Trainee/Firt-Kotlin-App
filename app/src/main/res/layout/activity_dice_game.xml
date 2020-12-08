@@ -12,6 +12,8 @@
         android:id="@+id/diceNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="10dp"
         android:text="Roll Now!"
         android:textColor="@color/black"
         android:textSize="18sp"

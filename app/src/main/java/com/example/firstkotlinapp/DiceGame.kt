@@ -1,5 +1,6 @@
 package com.example.firstkotlinapp
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -9,6 +10,7 @@ import android.widget.TextView
 class DiceGame : AppCompatActivity() {
     private lateinit var diceNumber: TextView
     private lateinit var rollDice: Button
+    private val luckyNumber = roll()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_dice_game)
@@ -16,9 +18,16 @@ class DiceGame : AppCompatActivity() {
         onRollDiceClick()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun onRollDiceClick() {
         rollDice.setOnClickListener {
-            diceNumber.text = roll().toString()
+            if (luckyNumber == roll())
+                diceNumber.text = "Congratulations! you won the game by rolling " +
+                        "${roll()}."
+            else{
+                diceNumber.text = "You loose! you rolled " +
+                        "${roll()}."
+            }
         }
     }
 
