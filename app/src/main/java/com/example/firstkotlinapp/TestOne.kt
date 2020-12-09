@@ -16,9 +16,13 @@ class TestOne : AppCompatActivity() {
         }*/
         // val myArray: IntArray = intArrayOf(1, 2, 3, 4)
         // val myArray = IntArray(4) { 45 }
-        val myArray = IntArray(4) { it * 1 }
-        myArray.forEach { textView.append(it.toString() + "\n") }
+        // val myArray = IntArray(4) { it * 1 }
+        // myArray.forEach { textView.append(it.toString() + "\n") }
 
 
+        val str = "My name is Prachan Ghale."
+        for (s in str) {
+            textView.append(s.toString() + "\n")
+        }
     }
 }
