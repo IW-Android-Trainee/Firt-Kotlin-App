@@ -14,9 +14,9 @@ class TestOne : AppCompatActivity() {
         /*val myArray = Array(1000) { value ->
             value + 1
         }*/
-        val myArray: IntArray = intArrayOf(1, 2, 3, 4)
-        
-
+        // val myArray: IntArray = intArrayOf(1, 2, 3, 4)
+        // val myArray = IntArray(4) { 45 }
+        val myArray = IntArray(4) { it * 1 }
         myArray.forEach { textView.append(it.toString() + "\n") }
 
 
