@@ -11,10 +11,14 @@ class TestOne : AppCompatActivity() {
 
         val textView: TextView = findViewById(R.id.textView)
 
-        val myArray = Array(5) { value ->
+        /*val myArray = Array(1000) { value ->
             value + 1
-        }
+        }*/
+        val myArray: IntArray = intArrayOf(1, 2, 3, 4)
+        
+
         myArray.forEach { textView.append(it.toString() + "\n") }
+
 
     }
 }
